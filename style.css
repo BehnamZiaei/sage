@@ -2,12 +2,49 @@
 Theme Name:         Sage Starter Theme
 Theme URI:          https://roots.io/sage/
 Description:        Sage is a WordPress starter theme.
-Version:            11.x-dev
+Version:            1.0.0
 Author:             Roots
 Author URI:         https://roots.io/
 Text Domain:        sage
 License:            MIT License
 License URI:        https://opensource.org/licenses/MIT
-Requires PHP:       8.3
-Requires at least:  6.6
+Requires PHP:       7.4
+Requires at least:  5.8
 */
+
+:root {
+    --sage-text: #1f2937;
+    --sage-muted: #6b7280;
+    --sage-border: #e5e7eb;
+    --sage-accent: #2563eb;
+    --sage-surface: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--sage-text); font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+a { color: var(--sage-accent); }
+img { max-width: 100%; height: auto; }
+.site-header { border-bottom: 1px solid var(--sage-border); background: #fff; }
+.site-header-inner, .site-footer-inner, .site-container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+.site-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.25rem 0; }
+.site-title { color: var(--sage-text); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+.site-description { color: var(--sage-muted); margin: .2rem 0 0; font-size: .9rem; }
+.nav-menu { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.nav-menu a { text-decoration: none; }
+.site-main { padding: 3rem 0; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 3rem; }
+.post-card, article { border-bottom: 1px solid var(--sage-border); margin-bottom: 2rem; padding-bottom: 2rem; }
+.entry-title, .page-title { line-height: 1.25; }
+.entry-title a { text-decoration: none; }
+.entry-meta { color: var(--sage-muted); font-size: .9rem; }
+.post-thumbnail { display: block; margin: 1rem 0; }
+.sidebar .widget { margin-bottom: 2rem; }
+.widget-title { font-size: 1.1rem; }
+.site-footer { border-top: 1px solid var(--sage-border); background: var(--sage-surface); padding: 2rem 0; }
+.screen-reader-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.screen-reader-text:focus { position: static; width: auto; height: auto; clip: auto; }
+@media (max-width: 760px) {
+    .site-header-inner, .content-grid { display: block; }
+    .primary-navigation { margin-top: 1rem; }
+    .sidebar { margin-top: 2rem; }
+}

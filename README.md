@@ -13,6 +13,18 @@
 
 **Advanced hybrid WordPress starter theme with Laravel Blade and Tailwind CSS**
 
+## نصب مستقیم در وردپرس
+
+این نسخه یک fallback مستقل هم دارد و بدون Composer یا Node.js قابل نصب است:
+
+1. پوشه `sage` را به صورت ZIP فشرده کنید (خود پوشه باید در ریشه ZIP باشد).
+2. در پیشخوان وردپرس به مسیر «نمایش > پوسته‌ها > افزودن پوسته تازه > بارگذاری پوسته» بروید.
+3. فایل ZIP را بارگذاری و پوسته را فعال کنید.
+4. از مسیر «نمایش > فهرست‌ها» منوی خود را به جایگاه `Primary Navigation` اختصاص دهید.
+
+فایل‌های Blade و Vite برای توسعه پیشرفته حفظ شده‌اند؛ اجرای عادی پوسته به
+`vendor` یا خروجی build وابسته نیست.
+
 - 🔧 Clean, efficient theme templating with Laravel Blade
 - ⚡️ Modern front-end development workflow powered by Vite
 - 🎨 Out of the box support for Tailwind CSS
